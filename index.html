@@ -18,29 +18,27 @@
 
         .avatar {
             background-color:#fff;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             
             margin: 0 auto;
         }
         
-        img{
-            .avatar-crop-result {
-                width: 80px; /* 可依需求改成 200px 或 44px */
-                height: 80px;
-                border-radius: 50%;
-                object-fit: cover;
-                object-position: 50.28% 50.32%;
-                transform: scale(1.065) rotate(0deg);
-                transform-origin: center center;
-            }
+        .avatar-crop-result {
+            width: 80px; /* 可依需求改成 200px 或 44px */
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50.28% 50.32%;
+            transform: scale(1.065) rotate(0deg);
+            transform-origin: center center;
         }
     </style>
 </head>
 <body>
     <div class="avatar">
-        <img src="頭像.png" alt="頭像">
+        <img class="avatar-crop-result" src="頭像.png" alt="頭像">
     </div>
     <h1>米亭祐月</h1>
 </body>
