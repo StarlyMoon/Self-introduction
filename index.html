@@ -3,44 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>星月大魔王</title>
+    <title>自我介紹</title>
 
     <style>
         body {
-            background-color: #00cbff;
-            padding: 20px;
+            body {
+                background-image: url("背景jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         }
         
         h1 {
             color: #ffd55e;
             text-align: center;
+            animation: appear 1s ease-out 3s both;
         }
 
+        p {
+            color: #ffd55e;
+            font-size: 22px;
+            animation: reveal 0.5s ease-out 4.5s both;
+        }
+        
         .avatar {
-            background-color: #fff;
-            width: 80px;
-            height: 80px;
+            background-color:#fff;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
+            overflow: hidden;
             margin: 0 auto;
-            overflow: hidden; /* 裁切放大後超出的部分 */
+            transform-origin: 50px 250px;
+            animation: turn 2s 1s both;
         }
         
         .avatar-crop-result {
-            width: 100%;
-            height: 100%;
-            display: block;
+            width: 80px; /* 可依需求改成 200px 或 44px */
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
             object-position: 50.28% 50.32%;
             transform: scale(1.065) rotate(0deg);
-            transform-origin: center center;
+            transform-origin: 50% 50%;
+        }
+        
+        @keyframes turn {
+            0% {
+                transform: rotate(0deg) scale(3) translateY(200px);
+            }
+            16.5% {
+                transform: rotate(-15deg) scale(3.2) translateY(200px);
+            }
+            33% {
+                transform: rotate(0deg) scale(3) translateY(200px);
+            }
+            100%{
+                transform: rotate(0deg) scale(1.065) translateY(0px);
+            }
+        }
+        
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes reveal {
+            0% {
+                clip-path: inset(0 0 100% 0);
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+            }
         }
     </style>
 </head>
 <body>
     <div class="avatar">
-        <img class="avatar-crop-result" src="頭像.jpeg" alt="頭像">
+        <img src="頭像.jpeg" alt="頭像">
     </div>
     <h1>米亭祐月</h1>
+    <p><b>
+        哈囉大家好，我是米亭祐月！<br>
+        歡迎來到我的網頁<br>
+        我也算是用盡了畢生所學，<br>
+        好不容易拗出了一個網頁。
+    </b></p>
 </body>
 </html>
